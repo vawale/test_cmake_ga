@@ -14,6 +14,8 @@ jobs:
               with:
                   lfs: false
             - name: Build
+              env:
+                  PY_COLORS: "1"
               run: |
                   docker run \
                       --volume $PWD:/host \
