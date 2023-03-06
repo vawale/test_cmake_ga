@@ -1,4 +1,5 @@
 #!/bin/bash
+export TERM=xterm-color
 
 SRC_DIR="src/"
 BUILD_DIR="build/"
