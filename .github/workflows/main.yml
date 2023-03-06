@@ -17,7 +17,7 @@ jobs:
               env:
                   PY_COLORS: "1"
               run: |
-                  docker run \
+                  docker run --rm -t \
                       --volume $PWD:/host \
                       --workdir /host \
                       ubuntu:20.04 \
