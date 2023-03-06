@@ -1,6 +1,9 @@
 name: Main CI workflow
 # Note: If the workflow name is changed, the CI badge URL in the README must also be updated
 
+on:
+    push:
+
 jobs:
     ubuntu:
         name: Ubuntu build
