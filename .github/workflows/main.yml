@@ -1,0 +1,19 @@
+name: Main CI workflow
+# Note: If the workflow name is changed, the CI badge URL in the README must also be updated
+
+jobs:
+    ubuntu:
+        name: Ubuntu build
+        runs-on: ubuntu-latest
+        steps:
+            - name: Check out code
+              uses: actions/checkout@v3
+              with:
+                  lfs: false
+            - name: Build
+              run: |
+                  docker run \
+                      --volume $PWD:/host \
+                      --workdir /host \
+                      ubuntu:20.04 \
+                      bash -c "./setup.sh && ./build.sh"
